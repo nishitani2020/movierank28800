@@ -23,6 +23,8 @@ Things you may want to cover:
 
 * ...
 
+## users テーブル
+
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
 | nickname | string | null: false |
@@ -36,32 +38,19 @@ Things you may want to cover:
 
 ## movies テーブル
 
-| Column   | Type   | Options     |
-| -------- | ------ | ----------- |
-| name     | string | null: false |
-| email    | string | null: false |
-| password | string | null: false |
-
-### Association
-
-- belongs_to :user
-- has_many :likes
-- has_many :liked_users
-
-## items テーブル
-
 | Column           | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
 | image            | text       | null:false                     |
 | name             | string     | null:false                     |
 | explanation      | text       | null:false                     |
 | category_id      | integer    | null:false                     |
-| price            | integer    | null:false                     |
 | user             | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
+- has_many :likes
+- has_many :liked_users
 
 ## likes テーブル
 
