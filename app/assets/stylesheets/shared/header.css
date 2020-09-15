@@ -1,0 +1,29 @@
+.header_bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:dimgrey;
+}
+
+.title{
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.log_session{
+ margin-right: 40px;
+}
+
+.log{
+ color: white;
+ font-size: 20px;
+ margin-right: 20px;
+ text-decoration: none;
+}
+
+.session{
+ color: white;
+ font-size: 20px;
+ text-decoration: none;
+}
