@@ -11,7 +11,7 @@
     <%= link_to '新規投稿商品', "#", class: "subtitle" %>
     <ul class='movie-lists'>      <% @movies.each do |movie| %>
         <li class = 'list'>
-          <%#= link_to movie_path(item.id), method: :get do %>
+          <%= link_to movie_path(movie.id), method: :get do %>
             <div class='movie-img-content'>
                <%= image_tag movie.image, class: "movie-img" %>
             </div>
@@ -23,7 +23,7 @@
             <%= movie.category.name%>
           </div>
         </div>
-          <%# end %>
+          <% end %>
         </li>
       <% end %>
     </ul>
