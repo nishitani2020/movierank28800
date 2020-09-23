@@ -5,4 +5,26 @@
 </div>
 
 <%= image_tag 'おしゃれ１.jpeg', :size =>'1420x600' %>
-<div><%=link_to "投稿する", new_movie_path %></div>
+<div><%=link_to "投稿する", new_movie_path, class: "post" %></div>
+
+ <div class='movie-contents'>
+    <%= link_to '新規投稿商品', "#", class: "subtitle" %>
+    <ul class='movie-lists'>      <% @movies.each do |movie| %>
+        <li class = 'list'>
+          <%#= link_to movie_path(item.id), method: :get do %>
+            <div class='movie-img-content'>
+               <%= image_tag movie.image, class: "movie-img" %>
+            </div>
+        <div class='movie-info'>
+          <h3 class='movie-name'>
+            <%= movie.name %>
+          </h3>
+          <div class='movie-category'>
+            <%= movie.category.name%>
+          </div>
+        </div>
+          <%# end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>

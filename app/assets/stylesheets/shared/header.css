@@ -3,12 +3,14 @@
   justify-content: space-between;
   align-items: center;
   background-color:dimgrey;
+  height: 80px;
 }
 
 .title{
   color: white;
   text-decoration: none;
   margin-left: 20px;
+  font-size: 40px;
 }
 
 .log{
