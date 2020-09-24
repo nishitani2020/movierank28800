@@ -1,11 +1,33 @@
 <%= render "shared/header"%>
 
+
+<div class = "main-decolation">
 <div class="header_coment">
  <div class="first_coment"><%="<映画を投稿しよう>"%></div>
 </div>
 
-<%= image_tag 'おしゃれ１.jpeg', :size =>'1420x600' %>
-<div><%=link_to "投稿する", new_movie_path, class: "post" %></div>
+
+<!-- Slider main container -->
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><%= image_tag 'おしゃれ１.jpeg' %></div>
+        <div class="swiper-slide"><%= image_tag 'おしゃれ１.jpeg' %></div>
+        <div class="swiper-slide"><%= image_tag 'おしゃれ１.jpeg' %></div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+</div>
+</div>
+
 
  <div class='movie-contents'>
     <%= link_to '新規投稿商品', "#", class: "subtitle" %>
@@ -28,3 +50,5 @@
       <% end %>
     </ul>
   </div>
+
+  <div><%=link_to "投稿する", new_movie_path, class: "post" %></div>

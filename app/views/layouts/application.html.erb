@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Movierank28800</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,5 +12,24 @@
 
   <body>
     <%= yield %>
+ <script>
+  var mySwiper = new Swiper ('.swiper-container', {
+    // ここからオプション
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+    autoplay: {
+      delay:3000,
+    },
+  })
+ </script>
   </body>
 </html>
