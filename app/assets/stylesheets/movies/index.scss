@@ -1,13 +1,21 @@
-
 .first_coment{
   font-size: 25px;
-  margin: 20px;
   text-align: center;
   color: white;
+  padding: 20px;
 }
 
 .post{
-  font-size: 30px;
+  font-size: 40px;
+  color: snow;
+  text-decoration: none;
+}
+
+.post-content{
+  background-color: dimgrey;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
 }
 
 .subtitle{
@@ -59,8 +67,8 @@
 
 
 .swiper-container {
-  width: 600px;
-  height: 300px;
+  width: 900px;
+  height: 550px;
 }
 
 .main-decolation{
