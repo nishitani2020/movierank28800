@@ -29,6 +29,9 @@ Things you may want to cover:
 
 URL:https://movierank28800.herokuapp.com/
 
+Basic認証ID:techmaster
+Basic認証PW:2020
+
 テスト用アカウント emmail:test@test.com 、 password:12345
 
 利用方法：ユーザーは映画の投稿、コメント、いいねができる。いいねの数でランキング形式になっており、人気の映画を知ることができる。また映画へのコメントで他のユーザーとの交流ができる。
