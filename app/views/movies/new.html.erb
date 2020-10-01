@@ -2,11 +2,7 @@
   <div class="items-sell-main">
     <h2 class="items-sell-title">映画の情報を入力</h2>
   <%= form_with model: @movie, url: movies_path, local: true do |f| %>
-
-    <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
-    <%# render 'shared/error_messages', model: f.object %>
-    <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
-
+    <%= render 'shared/error_messages', model: f.object %>
     <%# 出品画像 %>
     <div class="img-upload">
       <div class="weight-bold-text">

@@ -1,4 +1,5 @@
 class MoviesController < ApplicationController
+  before_action :authenticate_user!, only: [:new]
 
   def index
     @movies = Movie.all
@@ -19,6 +20,15 @@ class MoviesController < ApplicationController
 
   def show
     @movie = Movie.find(params[:id])
+  end
+
+  def destroy
+    @movie = Movie.find(params[:id])
+    if @movie.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
   end
 
   private

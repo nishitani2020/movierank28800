@@ -10,13 +10,12 @@
       <%= image_tag @movie.image ,class:"item-box-img" %>
     </div>
 
-    <%# if user_signed_in? && current_user.id == @item.user.id %>
-    <%#= link_to '商品の編集', edit_item_path(@movie.id), class: "item-red-btn" %>
+    <%if user_signed_in? && current_user.id == @movie.user.id %>
     <%# <p class='or-text'>or</p> %>
-    <%#= link_to '削除', item_path(@item.id), method: :delete, class:'item-destroy' %>
+    <%= link_to '削除', movie_path(@movie.id), method: :delete, class:'item-destroy' %>
     <%# elsif user_signed_in? && @item.purchase == nil %>
     <%#= link_to '購入画面に進む', item_orders_path(@item.id), class:"item-red-btn"%>
-    <%# end %>
+    <% end %>
     <div class="item-explain-box">
       <span><%= @movie.explanation %></span>
     </div>
