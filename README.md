@@ -103,7 +103,7 @@ Basic認証PW:2020
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
-| comment | text       | ------------------------------ |
+| comment | text       | null: false                    |
 | user    | references | null: false, foreign_key: true |
 | movie   | references | null: false, foreign_key: true |
 

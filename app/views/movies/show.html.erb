@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-<%# 商品の概要 %>
+<%# 映画の概要 %>
 <div class="item-show">
   <div class="item-box">
     <h2 class="name">
@@ -13,8 +13,6 @@
     <%if user_signed_in? && current_user.id == @movie.user.id %>
     <%# <p class='or-text'>or</p> %>
     <%= link_to '削除', movie_path(@movie.id), method: :delete, class:'item-destroy' %>
-    <%# elsif user_signed_in? && @item.purchase == nil %>
-    <%#= link_to '購入画面に進む', item_orders_path(@item.id), class:"item-red-btn"%>
     <% end %>
     <div class="item-explain-box">
       <span><%= @movie.explanation %></span>
@@ -32,9 +30,22 @@
       </tbody>
     </table>
   </div>
-  <%# /商品の概要 %>
+  <%# /映画の概要 %>
+
+  <div class="mcomments">
+    <%= render partial: 'comments/comment', collection: @comments %>
+  </div>
 
 
-
+ <div class="container">
+    <% if current_user %>
+      <%= form_with(model: [@movie, @comment], local: true) do |form| %>
+        <%= form.text_area :comment, placeholder: "コメントする", rows: "2" %>
+        <%= form.submit "SEND" %>
+      <% end %>
+    <% else %>
+      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+    <% end %>
+  </div>
 </div>
 

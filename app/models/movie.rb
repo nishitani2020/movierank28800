@@ -3,6 +3,7 @@ class Movie < ApplicationRecord
   belongs_to :user
   has_one_attached :image
   belongs_to_active_hash :category
+  has_many :comments
 
   validates :image, :name, :explanation, :category, presence: true
   
