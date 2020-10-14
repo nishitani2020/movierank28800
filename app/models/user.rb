@@ -4,9 +4,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :comments
-  has_many :movies
-
+  has_many :comments, dependent: :destroy
+  has_many :movies, dependent: :destroy
+  has_many :likes, dependent: :destroy
+ 
+  def liked_by?(movie_id)
+    likes.where(movie_id: movie_id).exists?
+  end
   
   validates :nickname, presence: true
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i }
