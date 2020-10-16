@@ -29,7 +29,7 @@
 </div>
 
 
- <div class='movie-contents'>
+<div class='movie-contents'>
     <%= link_to '新規投稿商品', "#", class: "subtitle" %>
     <ul class='movie-lists'>      <% @movies.each do |movie| %>
         <li class = 'list'>
@@ -49,7 +49,7 @@
         </li>
       <% end %>
     </ul>
-  </div>
+</div>
 
 <div class="post-content">
   <div><%=link_to "投稿", new_movie_path, class: "post" %></div>
