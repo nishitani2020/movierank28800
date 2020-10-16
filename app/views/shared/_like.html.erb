@@ -1,0 +1,5 @@
+   <% if current_user.liked_by?(@movie.id) %>
+    <%= link_to 'いいねを外す', destroy_like_path(@movie), method: :delete, remote: true %><%= @movie.likes.count %>
+   <% else %>
+    <%= link_to 'いいね', create_like_path(@movie), method: :post, remote: true %><%= @movie.likes.count %>
+   <% end %>
