@@ -54,8 +54,6 @@ Basic認証PW:2020
 
 
 
-
-
 ## users テーブル
 
 | Column   | Type   | Options     |
@@ -67,7 +65,6 @@ Basic認証PW:2020
 
 - has_many :movie
 - has_many :likes
-- has_many :liked_movies
 - has_many :commments
 
 ## movies テーブル
@@ -84,7 +81,6 @@ Basic認証PW:2020
 
 - belongs_to :user
 - has_many :likes
-- has_many :liked_users
 - has_many :comments
 
 ## likes テーブル

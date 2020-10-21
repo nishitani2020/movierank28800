@@ -1,0 +1,11 @@
+  <% if current_user.liked_by?(@movie.id) %>
+    <%= link_to destroy_like_path(@movie), class: "like-link", method: :delete, remote: true do %>
+      <i class="fas fa-heart unlike-btn"></i>
+    <% end %>
+    <%= @movie.likes.count %>
+  <% else %>
+    <%= link_to create_like_path(@movie), class: "like-link", method: :post, remote: true do %>
+      <i class="fas fa-heart like-btn"></i>
+    <% end %>
+    <%= @movie.likes.count %>
+  <% end %>
